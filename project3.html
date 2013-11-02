@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head charset="UTF-8">
+<title>WebGL Rendering Notes</title>
+<style type="text/css">
+textarea {
+    border: thin solid black;
+    position: relative;
+    left: 5px;
+	width: 75%;
+    font: 10pt Consolas;
+	overflow-x:auto;
+	background-color: lightgray;
+	color: brown;
+}
+p
+{
+text-align:justify;
+text-indent:25px;
+width: 90%;
+}
+li
+{
+text-align:justify;
+width: 90%;
+}
+</style>
+<script src="webgl-utils.js"></script>
+<script src="webgl-debug.js"></script>
+<script src="cuon-utils.js"></script>
+<script src="cuon-matrix.js"></script>
+<script src="shaderLightingTexturing.js"></script>
+<script src="jsonRenderable.js"></script>
+<script src="camera.js"></script>
+<script src="projectMain.js"></script>
+</head>
+<body onload="main();">
+<h2>A JSON Renderer</h2>
+<br><canvas id="myCanvas1" width="600px" height="600px" style="border:1px solid #FF0000; background: pink"></canvas>
+<br>ModelList:<select id="modelList" onchange="newModelFlag=true;">
+  <option value="teapot">teapot</option>
+  <option value="skull">skull</option>
+  <option value="House">House</option>
+  <option value="dabrovic-sponza">sponza</option>
+</select>
+Dolly:<input type='button' value='+' onclick="dollyRequired=1;"/>
+	<input type='button' value='-' onclick="dollyRequired=-1;"/>	
+	<br>
+	Toggle Rotate: <input type='button' value='Toggle' onclick="toggleRotateFlag();"/>	
+</body>
+</html>
